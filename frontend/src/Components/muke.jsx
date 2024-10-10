@@ -105,7 +105,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert("Failed to upload images");
+          alert(json.message);
         }
       }
       if (data.category == "car") {
@@ -121,7 +121,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert("Failed to upload images");
+          alert(json.message);
         }
       }
       if (data.category == "electronics") {
@@ -140,7 +140,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert("Failed to upload images");
+          alert(json.message);
         }
       }
       if (data.category == "other") {
@@ -155,6 +155,8 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           alert("Images uploaded successfully");
           const json = await response.json();
           console.log("the other", json);
+        } else {
+          alert(json.message);
         }
       }
     } catch (error) {
