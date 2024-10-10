@@ -1178,7 +1178,7 @@ const Products = ({ user3 }) => {
                   </ul>
                   <div className="ml-5">
                     <StarRatingH
-                      user={user3}
+                      user={user ? (user.tk == undefined ? user3 : user) : ""}
                       id={selectedProduct._id}
                       category={selectedProduct.category}
                     />
