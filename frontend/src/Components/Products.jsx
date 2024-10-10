@@ -532,7 +532,7 @@ const Products = ({ user3 }) => {
     const myUser = [];
     for (const user of carts) {
       const response = await fetch(
-        `${API_BASE_URL}/api/user/GetOneUserById/${user.userId}`,
+        `${API_BASE_URL}/api/user/GetOneUserById2/${user.userId}`,
         {
           method: "GET",
           headers: { "Content-Type": "application/json", authorization: token },
@@ -570,7 +570,7 @@ const Products = ({ user3 }) => {
     setRatedUsers(users);
     //
     const response = await fetch(
-      `${API_BASE_URL}/api/user/GetOneUserById/${userId}`
+      `${API_BASE_URL}/api/user/GetOneUserById2/${userId}`
     );
     if (response.ok) {
       let user = await response.json();
