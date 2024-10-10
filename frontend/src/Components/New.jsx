@@ -12,6 +12,7 @@ const StarRatingH = ({ user, id, category }) => {
   user = todo[0];
   let token = user ? "Bearer " + user.tk : "";
   console.log("the token ", token);
+  console.log("the user is ", user);
   if (token == "Bearer " + undefined) {
     token = user ? "Bearer " + user.token : "";
     console.log("the second token ", token);
