@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://mainkajufrontend.onrender.com",
+    origin: "https://waga-4wdz.onrender.com",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: "Content-Type,Authorization",
@@ -45,7 +45,7 @@ DbConnection();
 const serv = http.createServer(app);
 const io = new Server(serv, {
   cors: {
-    origin: "https://mainkajufrontend.onrender.com",
+    origin: "https://waga-4wdz.onrender.com",
     methods: ["GET", "POST", "PATCH", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   },

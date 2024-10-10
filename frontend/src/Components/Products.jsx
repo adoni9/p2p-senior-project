@@ -35,7 +35,7 @@ import { updateTech, setTech } from "../features/tech/techSlice";
 import { updateCart, addCartt, removeCart } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
 import { ImLocation } from "react-icons/im";
-const socket = io("https://mainkaju.onrender.com");
+const socket = io("https://backendk-gsf3.onrender.com");
 const Products = ({ user3 }) => {
   const dispatch2 = useDispatch();
   const todo = useSelector((state) => state.tech.tech);

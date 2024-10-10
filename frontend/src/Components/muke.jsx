@@ -3,7 +3,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { updateTech, setTech } from "../features/tech/techSlice";
 import { useDispatch } from "react-redux";
 import { io } from "socket.io-client";
-const socket = io("https://mainkaju.onrender.com");
+const socket = io("https://backendk-gsf3.onrender.com");
 const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
   const dispatch2 = useDispatch();
   const [images, setImages] = useState([]);
