@@ -188,7 +188,7 @@ const Products = ({ user3 }) => {
         _id: _idRef.current,
       })
     );
-  }, [location]);
+  }, [location, _idRef]);
   //useeffect for product
   useEffect(() => {
     Product();
