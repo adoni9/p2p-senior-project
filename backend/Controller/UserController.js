@@ -138,7 +138,7 @@ const GetOneUserById = async (req, res) => {
   const { id } = req.params;
   const cv = await User.findOne({ _id: id });
   console.log("");
-  const token = createToken(_id);
+  const token = createToken(id);
   res.status(200).json({
     gender: cv.gender,
     firstname: cv.firstname,
