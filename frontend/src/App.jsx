@@ -60,6 +60,7 @@ function App() {
       `${API_BASE_URL}/api/user/GetOneUserById/${id}`,
       {
         method: "GET",
+        headers: { "Content-Type": "application/json" },
       }
     );
     const json = await response.json();
