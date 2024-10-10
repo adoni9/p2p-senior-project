@@ -25,7 +25,7 @@ import { useDispatch, useSelector } from "react-redux";
 import New from "./Components/New";
 import { io } from "socket.io-client";
 import Products from "./Components/Products";
-// const socket = io("https://backendk-gsf3.onrender.com");
+// const socket = io("https://backends-i574.onrender.com");
 function App() {
   //const todo2 = useSelector((state) => state.tech.tech);
   const todo = useSelector((state) => state.admin.admin);

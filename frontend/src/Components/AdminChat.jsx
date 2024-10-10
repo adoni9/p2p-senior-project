@@ -23,7 +23,7 @@ const AdminChat = ({ user3, counter }) => {
   const [visible, setVisible] = useState(false);
   const [Counter, setCounter] = useState(0);
   const [SenderId, setSenderId] = useState(0);
-  let socket = io("https://backendk-gsf3.onrender.com");
+  let socket = io("https://backends-i574.onrender.com");
   //let { admin, dispatch } = useUserContextA();
   let chat = todo;
   const [profile2, setProfile] = useState("");

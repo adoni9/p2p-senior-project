@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setChat, removeChat } from "../features/chat/chatSlice";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-let socket = io("https://backendk-gsf3.onrender.com");
+let socket = io("https://backends-i574.onrender.com");
 const ChatTechAd = ({ user }) => {
   const todo = useSelector((state) => state.chat.chat);
   const dispatch2 = useDispatch();
