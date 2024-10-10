@@ -157,7 +157,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           json = await response.json();
           console.log("the other", json);
         } else {
-          throw Error(json.message);
+          throw Error(json);
           throw Error(json.message);
         }
       }
