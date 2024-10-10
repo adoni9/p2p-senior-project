@@ -92,6 +92,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
     });
 
     try {
+      let json;
       if (data.category == "house") {
         const response = await fetch(`${API_BASE_URL}/api/house/houseCreate`, {
           headers: { authorization: token },
@@ -102,7 +103,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          const json = await response.json();
+          json = await response.json();
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -118,7 +119,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          const json = await response.json();
+          json = await response.json();
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -137,7 +138,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          const json = await response.json();
+          json = await response.json();
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -153,7 +154,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          const json = await response.json();
+          json = await response.json();
           console.log("the other", json);
         } else {
           throw Error(json.message);
