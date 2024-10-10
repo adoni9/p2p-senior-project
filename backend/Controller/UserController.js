@@ -152,6 +152,13 @@ const GetOneUserById = async (req, res) => {
     location: cv.location,
   });
 };
+//
+const GetOneUserById2 = async (req, res) => {
+  const { id } = req.params;
+  const cv = await User.find({ _id: id });
+  console.log("");
+  res.status(200).json(cv);
+};
 const GetOneUserByEmail = async (req, res) => {
   const { custEmail } = req.body;
   const cv = await User.find({ email: custEmail });
@@ -208,4 +215,5 @@ module.exports = {
   GetUserExcept,
   GetOneUserByEmail,
   DeleteUser,
+  GetOneUserById2,
 };

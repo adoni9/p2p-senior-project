@@ -552,7 +552,7 @@ const Products = ({ user3 }) => {
     const usersComment = [];
     for (const userId of userIds) {
       const response = await fetch(
-        `${API_BASE_URL}/api/user/GetOneUserById/${userId.userId}`
+        `${API_BASE_URL}/api/user/GetOneUserById2/${userId.userId}`
       );
       if (response.ok) {
         let user = await response.json();
