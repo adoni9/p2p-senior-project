@@ -99,11 +99,11 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           method: "POST",
           body: formData,
         });
-
+        json = await response.json();
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          json = await response.json();
+
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -115,11 +115,11 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           method: "POST",
           body: formData,
         });
-
+        json = await response.json();
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          json = await response.json();
+
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -134,11 +134,11 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
             body: formData,
           }
         );
-
+        json = await response.json();
         if (response.ok) {
           socket.emit("insertItems", "ok");
           alert("Images uploaded successfully");
-          json = await response.json();
+
           console.log("the house", json);
         } else {
           throw Error(json.message);
@@ -158,7 +158,6 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           console.log("the other", json);
         } else {
           console.log("the other json", json);
-          throw Error(json);
           throw Error(json.message);
         }
       }
