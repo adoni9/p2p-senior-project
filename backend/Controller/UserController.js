@@ -136,9 +136,21 @@ const GetUserExcept = async (req, res) => {
 // Get one(if Super Admin is Available for the future)
 const GetOneUserById = async (req, res) => {
   const { id } = req.params;
-  const cv = await User.find({ _id: id });
+  const cv = await User.findOne({ _id: id });
   console.log("");
-  res.status(200).json(cv);
+  const token = createToken(_id);
+  res.status(200).json({
+    gender: cv.gender,
+    firstname: cv.firstname,
+    lastname: cv.lastname,
+    image: cv.image,
+    email1: cv.email,
+    phonenumber: cv.mobileMoney,
+    _id: cv._id,
+    token: token,
+    deposite: cv.deposite,
+    location: cv.location,
+  });
 };
 const GetOneUserByEmail = async (req, res) => {
   const { custEmail } = req.body;

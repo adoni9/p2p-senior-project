@@ -67,7 +67,7 @@ function App() {
       console.log("can not log");
     }
     if (response.ok) {
-      dispatch2(setTech(json));
+      dispatch2(setTech([json]));
       console.log("the my user is ", json);
       //save the user on local storage
       // localStorage.setItem("user", JSON.stringify(json));
