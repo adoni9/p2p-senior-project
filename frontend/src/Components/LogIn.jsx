@@ -17,7 +17,7 @@ const Login = () => {
     if (image) setViewer(true);
   };
   useEffect(() => {
-    setSocket(io("https://backends-i574.onrender.com"));
+    setSocket(io("https://backendw-eb9j.onrender.com"));
   }, []);
   useEffect(() => {
     socket?.emit("newUser", email);

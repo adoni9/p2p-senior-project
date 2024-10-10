@@ -12,7 +12,7 @@ import { updateCart, setCart, removeCart } from "../features/cart/cartSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-let socket = io("https://backends-i574.onrender.com");
+let socket = io("https://backendw-eb9j.onrender.com");
 const ChatTech = ({ user, owner, tPrice, itemId }) => {
   const todo = useSelector((state) => state.chat.chat);
   const dispatch2 = useDispatch();
