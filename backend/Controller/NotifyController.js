@@ -8,7 +8,7 @@ const bcryptjs = require("bcryptjs");
 const nodemailer = require("nodemailer");
 let otpStore = {}; // Temporary store for OTPs
 const io = require("socket.io-client");
-const socket = io("https://waga-i06b.onrender.com/");
+const socket = io("https://waga-i06b.onrender.com");
 //Sign Up
 const notifyCreat = async (req, res) => {
   const { category, image, owner, buyerName, buyerLocation, tPrice } = req.body;

@@ -195,11 +195,14 @@ const Products = ({ user3 }) => {
     getAllCarts();
   }, [location, user]);
   const response2 = async () => {
-    const response = await fetch(`${API_BASE_URL}/api/user/${_idRef.current}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ location: location }),
-    });
+    const response = await fetch(
+      `${API_BASE_URL}/api/user/UpdateOneUser/${_idRef.current}`,
+      {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ location: location }),
+      }
+    );
   };
   const getAllCarts = async () => {
     const response = await fetch(`${API_BASE_URL}/api/Cart/GetAllCart`, {
