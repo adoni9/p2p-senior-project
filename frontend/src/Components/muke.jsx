@@ -105,7 +105,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert(json.message);
+          throw Error(json.message);
         }
       }
       if (data.category == "car") {
@@ -121,7 +121,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert(json.message);
+          throw Error(json.message);
         }
       }
       if (data.category == "electronics") {
@@ -140,7 +140,7 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the house", json);
         } else {
-          alert(json.message);
+          throw Error(json.message);
         }
       }
       if (data.category == "other") {
@@ -156,12 +156,13 @@ const PictureUploader = ({ user4, data, data2, data3, data4 }) => {
           const json = await response.json();
           console.log("the other", json);
         } else {
-          alert(json.message);
+          throw Error(json.message);
+          throw Error(json.message);
         }
       }
     } catch (error) {
       console.log("Error uploading images", error);
-      alert("Error uploading images ", error);
+      alert(error);
     }
   };
   console.log("buna", imageFiles);
