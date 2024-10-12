@@ -4,6 +4,7 @@ const User = require("../Model/User");
 const Cart = require("../Model/Cart");
 const Car = require("../Model/Car");
 const House = require("../Model/House");
+const Other = require("../Model/Other");
 const Electronics = require("../Model/Electronics");
 const Withdraw = require("../Model/Withdraw");
 const CHAPA_BASE_URL = process.env.CHAPA_BASE_URL;
@@ -56,6 +57,9 @@ const preAuthorizePayment = async (req, res) => {
       }
       if (Category == "electronics") {
         Carts = await Electronics.findOne({ _id: paymentData.itemId });
+      }
+      if (Category == "other") {
+        Carts = await Other.findOne({ _id: paymentData.itemId });
       }
       res
         .status(200)
