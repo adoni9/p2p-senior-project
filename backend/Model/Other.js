@@ -93,6 +93,6 @@ const otherSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
+//globaliation
 const other = mongoose.model("other", otherSchema);
 module.exports = other;
