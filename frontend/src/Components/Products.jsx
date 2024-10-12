@@ -1076,8 +1076,8 @@ const Products = ({ user3 }) => {
             <p>No items to display</p>
           )
         ) : (
-          <p className="ml-[600px] mt-40 font-bold text-2xl">
-            <BeatLoader />
+          <p className="ml-[600px] mt-40 font-bold text-4xl text-">
+            <BeatLoader color="#A0E713" loading={true} size={60} />
           </p>
         )}
         {selectedProduct && (
