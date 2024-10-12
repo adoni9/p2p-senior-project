@@ -3,6 +3,7 @@ import { io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
+
 import { GiMaterialsScience } from "react-icons/gi";
 import { FaCircle } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
@@ -1075,7 +1076,9 @@ const Products = ({ user3 }) => {
             <p>No items to display</p>
           )
         ) : (
-          <p className="ml-[600px] mt-40 font-bold text-2xl">Loading...</p>
+          <p className="ml-[600px] mt-40 font-bold text-2xl">
+            <BeatLoader />
+          </p>
         )}
         {selectedProduct && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
