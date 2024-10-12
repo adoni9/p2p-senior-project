@@ -34,7 +34,7 @@ const SignUpA = () => {
 
   return (
     <div>
-      <div className=" mt-12   h-[700px] w-[700px] ml-[300px] absolute bg-opacity-50 backdrop-filter backdrop-blur-sm border-[1px] border-white">
+      <div className=" mt-12   h-[700px] w-[700px] ml-[300px] absolute bg-opacity-50 backdrop-filter backdrop-blur-sm border-[1px] border-white bg-blue-800">
         <div className="absolute ">
           <form onSubmit={handleSumit} className="to-blue-100">
             <div className=" flex flex-col justify-center ml-[290px] mb-6 mt-5">
@@ -152,7 +152,7 @@ file:shadow-lg file shadow-blue-600/50
         </div>
       </div>
 
-      <img className="object-fill w-full h-full" src={hiloe5} alt="" />
+      {/* <img className="object-fill w-full h-full" src={hiloe5} alt="" /> */}
     </div>
   );
 };
