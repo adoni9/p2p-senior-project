@@ -4,7 +4,9 @@ ABUBEKER HUSSEN SEMAN
 ADONIAS MESFIN ABERA
 AKRAM IDRIS NEGASH
 BROOK ZEWGE TEFERA
+
 /*===============================================*/
+
 Executive Summary
 The project, P2P E-commerce Platform with Secure Payments, addresses the growing need for a decentralized and secure marketplace that enables users to buy and sell goods directly, without the reliance on centralized authorities. The existing e-commerce platforms often face issues like high transaction fees, security risks, and inefficiencies in logistics. This project aims to overcome these challenges by offering a peer-to-peer platform that enhances transaction security and fosters trust between users.
 The platform integrates modern technologies like secure payment gateways (Chapa), real-time location-based notifications to ensure a seamless user experience. Additionally, it incorporates OTP-based email verification and JWT for secure user authentication, ensuring data protection and minimizing the risk of fraud.
