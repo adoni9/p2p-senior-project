@@ -112,7 +112,7 @@ const Admin = ({ user3 }) => {
     setUserList([]);
     setAmount2("");
   };
-  const red = useNavigate();
+  const red = useNavigate();//redirection nav
 
   const handleP = () => {
     socket.emit("ShowTech", "ok");
