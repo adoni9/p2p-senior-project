@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { formatDistanceToNow } from "date-fns";
-
+import { BeatLoader } from "react-spinners";
 import { GiMaterialsScience } from "react-icons/gi";
 import { FaCircle } from "react-icons/fa";
 import { IoMdNotifications } from "react-icons/io";
