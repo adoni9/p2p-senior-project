@@ -488,6 +488,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             <p className="font-bold text-white">Total Amount:{tPrice}</p>
             {Sccess && toastify2(MyMessage)}
             {Error2 && toastify(Error2)}
+
             <ToastContainer />
           </div>
         )}
