@@ -1079,6 +1079,7 @@ const Products = ({ user3 }) => {
           <p className="ml-[600px] mt-40 font-bold text-4xl text-">
             <BeatLoader />
           </p>
+          //Loading Icon
         )}
         {selectedProduct && (
           <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
