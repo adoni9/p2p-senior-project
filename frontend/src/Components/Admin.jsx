@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 const socket = io("https://backendw-eb9j.onrender.com");
 import { useRegister } from "../Hooks/useRegister";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";//import nav here
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { FaCheckCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
