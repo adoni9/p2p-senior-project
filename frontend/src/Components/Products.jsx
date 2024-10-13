@@ -971,7 +971,7 @@ const Products = ({ user3 }) => {
           </div>
           <div>
             <div
-              className="ml-[78px]  mt-3 absolute"
+              className="ml-[78px]  mt-3 absolute cursor-pointer"
               onClick={handleSearchChangeA}
             >
               <MdOutlineWork className="text-[20px]  " />
