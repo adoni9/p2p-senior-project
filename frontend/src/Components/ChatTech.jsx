@@ -81,7 +81,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
 
   const featcher2 = async () => {
     console.log("the featcher", owner);
-    response = await fetch(`${API_BASE_URL}/api/user/GetOneUserById/${owner}`);
+    response = await fetch(`${API_BASE_URL}/api/user/GetOneUserById2/${owner}`);
     const json = await response.json();
     setCollector(json);
   };
