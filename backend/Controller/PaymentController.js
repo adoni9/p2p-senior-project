@@ -40,13 +40,14 @@ const preAuthorizePayment = async (req, res) => {
         { deposite: deposite },
         { new: true }
       );
-
+//status change in cart
       const requiredCart = await Cart.findOne({ itemId: paymentData.itemId });
       const updateCart = await Cart.findByIdAndUpdate(
         { _id: requiredCart._id },
         { status: "paid", money: paymentData.money },
         { new: true }
       );
+//refresh cart after updated status
       const Category = requiredCart.category;
       let Carts;
       if (Category == "car") {
