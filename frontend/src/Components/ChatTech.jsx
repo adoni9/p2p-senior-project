@@ -483,15 +483,16 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
         ) : (
           <div>hI hi</div>
         )}
-        {status == "paid" && (
+        {status == "unpaid" && (
           <div className="mt-5  ml-12">
             <p className="font-bold text-white">Total Amount:{tPrice}</p>
-            {Sccess && toastify2(MyMessage)}
+            
             {Error2 && toastify(Error2)}
 
             <ToastContainer />
           </div>
         )}
+        {Sccess && toastify2(MyMessage)}
       </div>
     </div>
   );
