@@ -21,7 +21,7 @@ const LoginA = () => {
 
   return (
     <div>
-      <div className=" mt-44 border-black  bg-slate-50  h-[500px] w-[700px] ml-[310px] absolute bg-opacity-50 backdrop-filter backdrop-blur-sm border-[1px] ">
+      <div className=" mt-44 border-black  bg-cyan-950  h-[500px] w-[700px] ml-[310px] absolute bg-opacity-50 backdrop-filter backdrop-blur-sm border-[1px] ">
         <div className="absolute">
           <form onSubmit={handleSumit}>
             <div className=" flex flex-col justify-center ml-[290px] mb-6 mt-12">
