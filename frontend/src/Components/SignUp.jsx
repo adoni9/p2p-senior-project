@@ -136,7 +136,7 @@ const SignUp = () => {
     red("/login");
   };
 
-  ///
+  ///this is where we fetch or get all user info for signup
   return (
     <div>
       {View2 && (

@@ -25,6 +25,7 @@ import { useDispatch, useSelector } from "react-redux";
 import New from "./Components/New";
 import { io } from "socket.io-client";
 import Products from "./Components/Products";
+import LoadingButton from "./Components/waitingB";
 // const socket = io("https://backendw-eb9j.onrender.com");
 function App() {
   //const todo2 = useSelector((state) => state.tech.tech);
@@ -111,6 +112,7 @@ function App() {
           <Route path="/Products" element={<Products user3={user} />} />
           <Route path="/New" element={<New />} />
           <Route path="/PictureUploader" element={<PictureUploader />} />
+          <Route path="/LoadingButton" element={<LoadingButton />} />
         </Routes>
       </BrowserRouter>
     </div>
