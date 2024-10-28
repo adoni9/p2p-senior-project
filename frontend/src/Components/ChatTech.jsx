@@ -503,7 +503,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
               I Have Received the Goods
             </button>
             <button
-              className="mt-10 ml-10 border-2 h-14 w-44 rounded-lg bg-red-500 hover:bg-red-400"
+              className="mt-10 ml-4 border-2 h-14 w-44 rounded-lg bg-red-500 hover:bg-red-400"
               onClick={CancelPayment}
             >
               Cancel Order
