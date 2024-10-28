@@ -315,4 +315,5 @@ module.exports = {
   UpdateDeposit,
   withdraw,
   GetAllWithdraw,
+  CancelPayment
 };
