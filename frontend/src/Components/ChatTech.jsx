@@ -495,15 +495,15 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             </button>
           </div>
         ) : status === "paid" && tPrice != 0 ? (
-          <div className="mt-[-250px] ml-10 border-2 h-14 w-44 rounded-lg bg-red-500 hover:bg-red-400">
+          <div className="mt-[-250px] ml-10 border-2 h-14 w-44 rounded-lg bg-green-500 hover:bg-green-400">
             <button
               className="text-white ml-1 mt-1 font-bold"
               onClick={HandleMerchantPayment}
             >
-              Have You Received the Goods?
+              I Have Received the Goods
             </button>
             <button
-              className="text-white ml-4 mt-1 font-bold"
+              className="mt-10 ml-10 border-2 h-14 w-44 rounded-lg bg-red-500 hover:bg-red-400"
               onClick={CancelPayment}
             >
               Cancel Order
