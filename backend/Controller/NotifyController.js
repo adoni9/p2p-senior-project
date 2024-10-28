@@ -11,7 +11,7 @@ const io = require("socket.io-client");
 const socket = io("https://waga-i06b.onrender.com");
 //Sign Up
 const notifyCreat = async (req, res) => {
-  const { category, image, owner, buyerName, buyerLocation, tPrice } = req.body;
+  const { category, image, owner, buyerName, buyerLocation, tPrice,status } = req.body;
 
   // Apply to the user
 
@@ -23,6 +23,7 @@ const notifyCreat = async (req, res) => {
       buyerName,
       buyerLocation,
       tPrice,
+      status
     });
 
     res.status(200).json(notify);
