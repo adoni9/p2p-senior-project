@@ -240,7 +240,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
           _id: payment.balance._id,
         })
       );
-      setSccess(MyMessage);
+      
       dispatch2(
         updateCart({
           itemId: payment.updateCart.itemId,
