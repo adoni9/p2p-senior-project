@@ -215,7 +215,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
   const CancelPayment = async () => {
     const paymentData = { money: money, itemId: itemId };
     const response = await fetch(
-      `${API_BASE_URL}/api/payment/CancelPayment`,
+      `${API_BASE_URL}/api/payment/cancelPayment`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json", authorization: token },
@@ -495,9 +495,9 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             </button>
           </div>
         ) : status === "paid" && tPrice != 0 ? (
-          <div className="mt-[-250px] ml-10 border-2 h-14 w-44 rounded-lg bg-green-500 hover:bg-green-400">
+          <div className="mt-[-250px] ml-10 border-2 h-14 w-44 rounded-lg ">
             <button
-              className="text-white ml-1 mt-1 font-bold"
+              className="text-white ml-1 mt-1 font-bold bg-green-500 hover:bg-green-400"
               onClick={HandleMerchantPayment}
             >
               I Have Received the Goods

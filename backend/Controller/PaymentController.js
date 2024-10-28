@@ -97,7 +97,7 @@ const merchantPayment = async (req, res) => {
   }
 };
 //cancel payment
-const CancelPayment = async (req, res) => {
+const cancelPayment = async (req, res) => {
   const id = req.User._id;
   const paymentData = req.body;
   const customer = await User.findById(id);
@@ -315,5 +315,5 @@ module.exports = {
   UpdateDeposit,
   withdraw,
   GetAllWithdraw,
-  CancelPayment
+  cancelPayment
 };

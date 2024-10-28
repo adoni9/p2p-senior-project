@@ -10,14 +10,14 @@ const {
   UpdateDeposit,
   withdraw,
   GetAllWithdraw,
-  CancelPayment
+  cancelPayment
 } = require("../Controller/PaymentController");
 const AuthenticationUser = require("../MiddleWare/AuthenticationUser");
 const express = require("express");
 const router = express.Router();
 router.get("/checkPlatformBalance", checkPlatformBalance);
 router.post("/preAuthorizePayment", AuthenticationUser, preAuthorizePayment);
-router.post("/CancelPayment", AuthenticationUser, CancelPayment);
+router.post("/CancelPayment", AuthenticationUser, cancelPayment);
 router.post("/merchantPayment", merchantPayment);
 router.patch("/UpdateDeposit", UpdateDeposit);
 router.post("/capturePayment/:id", capturePayment);
