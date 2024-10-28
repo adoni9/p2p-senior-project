@@ -211,6 +211,48 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
       setError2(payment.message);
     }
   };
+  //Cancel Payment
+  const CancelPayment = async () => {
+    const paymentData = { money: money, itemId: itemId };
+    const response = await fetch(
+      `${API_BASE_URL}/api/payment/CancelPayment`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json", authorization: token },
+        body: JSON.stringify(paymentData),
+      }
+    );
+    if (response.ok) {
+      const payment = await response.json();
+      console.log("the payment", payment);
+      await notify(payment.updateCart,"canceled");
+      dispatch2(
+        updateTech({
+          id: Id2,
+          firstname: Firstname,
+          lastname: Lastname,
+          gender: payment.balance.gender,
+          phonenumber: payment.balance.mobileMoney,
+          deposit: payment.balance.deposite,
+          email: payment.balance.email,
+          image: profile,
+          location: payment.balance.location,
+          _id: payment.balance._id,
+        })
+      );
+      setSccess(MyMessage);
+      dispatch2(
+        updateCart({
+          itemId: payment.updateCart.itemId,
+          status: payment.updateCart.status,
+          money: payment.updateCart.money,
+        })
+      );
+    } else {
+      const payment = await response.json();
+      setError2(payment.message);
+    }
+  };
   //
   const HandlePayment = async () => {
     const paymentData = { money: tPrice, itemId: itemId };
@@ -225,7 +267,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
     if (response.ok) {
       const payment = await response.json();
       console.log("the payment", payment);
-      await notify(payment.updateCart);
+      await notify(payment.updateCart,"paid");
       dispatch2(
         updateTech({
           id: Id2,
@@ -254,7 +296,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
     }
   };
   //notify
-  const notify = async (Carts) => {
+  const notify = async (Carts,status) => {
     const response = await fetch(`${API_BASE_URL}/api/notify/notifyCreat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -265,6 +307,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
         tPrice: tPrice,
         category: Carts.category,
         image: Carts.image,
+        status:status
       }),
     });
     if (response.ok) {
@@ -459,6 +502,13 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             >
               Have You Received the Goods?
             </button>
+            <button
+              className="text-white ml-4 mt-1 font-bold"
+              onClick={CancelPayment}
+            >
+              Cancel Order
+            </button>
+            
             <div className="flex mt-5">
               <IoIosWarning className="text-yellow-300 text-[40px]" />
               <p className="text-[12px] text-white ml-3">

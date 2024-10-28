@@ -96,6 +96,46 @@ const merchantPayment = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+//cancel payment
+const CancelPayment = async (req, res) => {
+  const id = req.User._id;
+  const paymentData = req.body;
+  const customer = await User.findById(id);
+  try {
+ 
+      const deposite = customer.deposite + paymentData.money;
+      const balance = await User.findByIdAndUpdate(
+        { _id: id },
+        { deposite: deposite },
+        { new: true }
+      );
+
+      const requiredCart = await Cart.findOne({ itemId: paymentData.itemId });
+      const updateCart = await Cart.findByIdAndUpdate(
+        { _id: requiredCart._id },
+        { status: "canceled", money: paymentData.money },
+        { new: true }
+      );
+      const Category = requiredCart.category;
+      let Carts;
+      if (Category == "car") {
+        Carts = await Car.findOne({ _id: paymentData.itemId });
+      }
+      if (Category == "house") {
+        Carts = await House.findOne({ _id: paymentData.itemId });
+      }
+      if (Category == "electronics") {
+        Carts = await Electronics.findOne({ _id: paymentData.itemId });
+      }
+      res
+        .status(200)
+        .json({ balance: balance, updateCart: updateCart, Carts: Carts });
+    
+    
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 //Recharge Account
 const rechargeBalance = async (req, res) => {
   const id = req.User._id;

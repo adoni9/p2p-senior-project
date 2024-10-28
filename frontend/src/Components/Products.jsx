@@ -779,6 +779,7 @@ const Products = ({ user3 }) => {
             </button>
           </div>
           {array3.map((d, index) => (
+            d.status=="paid"?
             <div
               className={
                 "w-80 cursor-pointer ml-3  hover:bg-yellow-400 mt-8 rounded-lg " +
@@ -797,7 +798,26 @@ const Products = ({ user3 }) => {
                   })}
                 </p>
               </div>
-            </div>
+            </div>:
+             <div
+             className={
+               "w-80 cursor-pointer ml-3  hover:bg-yellow-400 mt-8 rounded-lg " +
+               disp12
+             }
+             key={index}
+           >
+             <div className="mt-3  ">
+               <p>From{" " + d.buyerLocation}</p>
+               <p>{d.buyerName + " "} </p>
+               <p>and has canceled{" " + d.tPrice + " birr "} for it</p>
+               {d.category} <img src={d.image} alt="" className="w-20 h-20" />
+               <p className="">
+                 {formatDistanceToNow(new Date(d.createdAt), {
+                   addSuffix: true,
+                 })}
+               </p>
+             </div>
+           </div>
           ))}
         </div>
         <div
