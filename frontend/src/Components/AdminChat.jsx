@@ -9,6 +9,11 @@ import { MdCircle } from "react-icons/md";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { setChat, removeChat } from "../features/chat/chatSlice";
 const AdminChat = ({ user3, counter }) => {
+  const todo2 = useSelector((state) => state.admin.admin);
+  if(todo2)
+  {
+    user3=todo2
+  }
   user3 = user3[0];
   const todo = useSelector((state) => state.chat.chat);
   const dispatch2 = useDispatch();
