@@ -726,12 +726,6 @@ const Products = ({ user3 }) => {
           </div>
           <div className="w-40 mt-4  text-white text-[15px] ">{location}</div>
         </div>
-        <div className="text-[15px]" onClick={handleRedirect}>
-          signup
-        </div>
-        <div className="text-[15px]" onClick={handleRedirectLog}>
-          signIn
-        </div>
         <div className="ml-2 mb-11 mt-10 flex">
           <IoSearchSharp className="text-2xl  mt-3 text-white" />
           <input
