@@ -10,7 +10,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { setChat, removeChat } from "../features/chat/chatSlice";
 const AdminChat = ({ user3, counter }) => {
   const todo2 = useSelector((state) => state.admin.admin);
-  
+  console.log("the todo2 is ",todo2)
     user3=todo2
   
   user3 = user3[0];
