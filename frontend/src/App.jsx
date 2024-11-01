@@ -88,6 +88,7 @@ function App() {
     }
     if (response.ok) {
       dispatch2(setAdmin([json]));
+      console.log("the admin state is ",json)
       //save the user on local storage
       // localStorage.setItem("user", JSON.stringify(json));
     } else {
