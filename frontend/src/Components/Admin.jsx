@@ -524,7 +524,7 @@ const Admin = ({ user3 }) => {
                 />
               </div>
 
-              {filteredCustomers.length > 0 ? (
+              {filteredCustomers.length > 0&&filteredCustomers!=undefined ? (
                 filteredCustomers.map((r, index) => (
                   <div
                     key={index}
@@ -532,7 +532,7 @@ const Admin = ({ user3 }) => {
                   >
                     <div className="ml-3 mt-1">
                       <div className="flex ">
-                        {console.log("the image is ", r.image)}
+                        {/* {console.log("the image is ", r.image)} */}
                         <img
                           src={r.image}
                           className="mr-2 w-14 h-14 rounded-full"
