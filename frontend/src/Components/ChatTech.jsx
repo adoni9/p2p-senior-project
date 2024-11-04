@@ -488,7 +488,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
         </div>
         {console.log("the my itemId is ", itemId)}
         {console.log("the my status is ", status)}
-        {status == "unpaid" && tPrice != 0 ? (
+        {(status == "unpaid"||status =="canceled") && tPrice != 0 ? (
           <div className="mt-[-250px] ml-10 border-2 h-10 w-44 rounded-lg bg-green-500">
             <button className="text-white ml-14 mt-1" onClick={HandlePayment}>
               Confirm
