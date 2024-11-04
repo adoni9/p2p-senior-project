@@ -1214,7 +1214,7 @@ const Products = ({ user3 }) => {
               </button>
             </div>
 
-            <div className=" ml-[-900px]">
+            <div className=" ml-[-900px] bg-gray-400">
               <ChatTechAd
                 user={user ? (user.tk == undefined ? user3 : user) : ""}
                 className="w-full h-full object-cover"
@@ -1313,7 +1313,7 @@ const Products = ({ user3 }) => {
                   <IoIosClose className="text-4xl" />
                 </button>
               </div>
-              <div className="mt-[-90px] ">
+              <div className="mt-[-90px] bg-gray-400">
                 <ChatTech
                   user={user.tk == undefined ? user3 : user}
                   owner={ownerId}
@@ -1333,7 +1333,7 @@ const Products = ({ user3 }) => {
                   <IoIosClose className="text-4xl" />
                 </button>
               </div>
-              <div className="mt-[-90px]">
+              <div className="mt-[-90px] bg-gray-400">
                 <ChatTech
                   user={user.tk == undefined ? user3 : user}
                   owner={senderId}
