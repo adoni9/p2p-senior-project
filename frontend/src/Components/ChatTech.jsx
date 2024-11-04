@@ -26,7 +26,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
   const [name, setname] = useState("");
   const [width, setWidth] = useState("");
   const [mMSG, setMMSG] = useState("");
-  const [Sccess, setSccess] = useState(null);
+  const [Sccess, setSccess] = useState(false);
   const [Error2, setError2] = useState(null);
   const [visible, setVisible] = useState(false);
   const [visible2, setVisible2] = useState("");
@@ -282,7 +282,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
           _id: payment.balance._id,
         })
       );
-      setSccess(MyMessage);
+      setSccess(true);
       dispatch2(
         updateCart({
           itemId: payment.updateCart.itemId,
@@ -316,7 +316,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
     }
   };
   const toastify2 = (message) => {
-    setSccess(null);
+    setSccess(false);
     toast.success(message, {
       position: "bottom-right",
       style: { backgroundColor: "#EEEEEE", color: "black", fontWeight: "bold" },
