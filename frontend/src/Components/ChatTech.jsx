@@ -367,7 +367,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
   };
   return (
     <div>
-      <div className="mt-20 ml-36 ">
+      <div className="mt-20 ml-36 bg-gray-400 ">
         <h1 className="text-3xl font-mono text-white">Messages</h1>
         <div className="flex">
           <div className=" h-96 w-80 border-r-2 border-gray-100  mt-16 ">

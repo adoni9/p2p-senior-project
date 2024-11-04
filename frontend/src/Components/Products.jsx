@@ -1313,7 +1313,7 @@ const Products = ({ user3 }) => {
                   <IoIosClose className="text-4xl" />
                 </button>
               </div>
-              <div className="mt-[-90px] bg-gray-500">
+              <div className="mt-[-90px] ">
                 <ChatTech
                   user={user.tk == undefined ? user3 : user}
                   owner={ownerId}
