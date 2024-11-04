@@ -531,9 +531,9 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             <button className="text-white ml-14 mt-1">paid</button>
           </div>
         ) : (
-          <div>hI hi</div>
+          <div></div>
         )}
-        {status == "unpaid" && (
+        {(status == "unpaid"||status =="canceled") && (
           <div className="mt-5  ml-12">
             <p className="font-bold text-white">Total Amount:{tPrice}</p>
             

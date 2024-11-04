@@ -219,6 +219,11 @@ const Admin = ({ user3 }) => {
     setdisplay12("visible");
     setdisplay11("hidden");
   };
+  const handleChoiceChange10 = () => {
+    setdisplay8("hidden");
+    setdisplay12("hidden");
+    setdisplay11("visible");
+  };
   const findApplicant = async (d) => {
     setApplicantId(d);
     const response = await fetch(
@@ -894,7 +899,7 @@ const Admin = ({ user3 }) => {
                   <p>AccountNumber:{r.accountNumber}</p>
                 </div>
               ))}
-            <button className="border-2 rounded-md bg-blue-500">
+            <button className="border-2 rounded-md bg-blue-500" onClick={handleChoiceChange10}>
               Finished
             </button>
           </div>
