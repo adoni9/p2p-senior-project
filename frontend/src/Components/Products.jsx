@@ -934,7 +934,7 @@ const Products = ({ user3 }) => {
       </div>
       {handleProfile && (
         <div className="absolute bg-slate-50 text-4xl ml-[700px]  h-[430px] mt-[-14px] w-[500px]">
-          <UserProfile user4={user.tk == undefined ? user3 : user} />
+          <UserProfile user4={user.tk == undefined ? user3 : user}  email={user3.email1} />
         </div>
       )}
       <div
@@ -1313,7 +1313,7 @@ const Products = ({ user3 }) => {
                   <IoIosClose className="text-4xl" />
                 </button>
               </div>
-              <div className="mt-[-90px]">
+              <div className="mt-[-90px] bg-gray-500">
                 <ChatTech
                   user={user.tk == undefined ? user3 : user}
                   owner={ownerId}

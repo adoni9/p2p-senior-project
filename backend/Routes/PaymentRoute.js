@@ -10,7 +10,8 @@ const {
   UpdateDeposit,
   withdraw,
   GetAllWithdraw,
-  cancelPayment
+  cancelPayment,
+  deleteWithdraw
 } = require("../Controller/PaymentController");
 const AuthenticationUser = require("../MiddleWare/AuthenticationUser");
 const express = require("express");
@@ -26,5 +27,6 @@ router.post("/transferToSeller", transferToSeller);
 router.post("/verifyPayment", verifyPayment);
 router.post("/withdraw", withdraw);
 router.get("/GetAllWithdraw", GetAllWithdraw);
+router.route("/deleteWithdraw/:id").delete(deleteWithdraw);
 router.post("/rechargeBalance", AuthenticationUser, rechargeBalance);
 module.exports = router;

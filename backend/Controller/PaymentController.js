@@ -297,7 +297,14 @@ const withdraw = async (req, res) => {
   });
   res.status(200).json(data);
 };
-//
+//delete withdrawal
+const deleteWithdraw = async (req, res) => {
+  const { id } = req.params;
+  const update = await Withdraw.findOneAndDelete({ _id: id });
+  const result = await Withdraw.find({ });
+  res.status(200).json(result);
+};
+//get all withdrawal
 const GetAllWithdraw = async (req, res) => {
   const data = await Withdraw.find({});
   res.status(200).json(data);
@@ -315,5 +322,6 @@ module.exports = {
   UpdateDeposit,
   withdraw,
   GetAllWithdraw,
-  cancelPayment
+  cancelPayment,
+  deleteWithdraw
 };

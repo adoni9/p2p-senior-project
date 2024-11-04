@@ -219,8 +219,22 @@ const Admin = ({ user3 }) => {
     setdisplay12("visible");
     setdisplay11("hidden");
   };
-  const handleChoiceChange10 = () => {
-    setdisplay8("hidden");
+  const handleChoiceChange10 = async (id) => {
+    setdisplay15(false);
+    const response = await fetch(
+      `${API_BASE_URL}/api/payment/deleteWithdraw/${id}`,
+      {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    if(response.ok)
+    {
+      withdrawfeatcher();
+    }
+    else{
+      alert("unable to delete")
+    }
     setdisplay12("hidden");
     setdisplay11("visible");
   };
@@ -899,7 +913,7 @@ const Admin = ({ user3 }) => {
                   <p>AccountNumber:{r.accountNumber}</p>
                 </div>
               ))}
-            <button className="border-2 rounded-md bg-blue-500" onClick={handleChoiceChange10}>
+            <button className="border-2 rounded-md bg-blue-500" onClick={()=>handleChoiceChange10(r._id)}>
               Finished
             </button>
           </div>

@@ -15,7 +15,7 @@ import { logOut } from "../features/tech/techSlice";
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { IoIosClose } from "react-icons/io";
 import { removeProduct, setProduct } from "../features/product/productSlice";
-const UserProfile = ({ user4 }) => {
+const UserProfile = ({ user4,email }) => {
   console.log("the profile is ", user4);
   const dispatch2 = useDispatch();
   let token = user4 ? "Bearer " + user4.tk : "";
@@ -834,7 +834,7 @@ const UserProfile = ({ user4 }) => {
             </div>
             <div className="flex">
               <MdEmail />
-              <p className="mt-[-12px] ml-3">Email: {user4.email}</p>
+              <p className="mt-[-12px] ml-3">Email: {email}</p>
             </div>
           </div>
         </div>
