@@ -156,7 +156,7 @@ const ChatTechAd = ({ user }) => {
 
   return (
     <div>
-      <div className=" ml-10 w-96 h-80 ">
+      <div className=" ml-10 w-96 h-80 bg-gray-300 ">
         <h1 className="text-3xl font-mono text-white">Messages</h1>
         <div className="flex">
           <div className=" h-96 w-80 border-r-2 border-gray-100  mt-16">
