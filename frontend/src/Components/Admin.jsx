@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 const socket = io("https://backendw-eb9j.onrender.com");
 import { useRegister } from "../Hooks/useRegister";
-import { useNavigate } from "react-router-dom";//import nav here
+import { useNavigate } from "react-router-dom"; //import nav here
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 import { FaCheckCircle } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
@@ -112,7 +112,7 @@ const Admin = ({ user3 }) => {
     setUserList([]);
     setAmount2("");
   };
-  const red = useNavigate();//redirection nav
+  const red = useNavigate(); //redirection nav
 
   const handleP = () => {
     socket.emit("ShowTech", "ok");
@@ -220,7 +220,7 @@ const Admin = ({ user3 }) => {
     setdisplay11("hidden");
   };
   const handleChoiceChange10 = async (id) => {
-    setdisplay15(false);
+    
     const response = await fetch(
       `${API_BASE_URL}/api/payment/deleteWithdraw/${id}`,
       {
@@ -228,12 +228,12 @@ const Admin = ({ user3 }) => {
         headers: { "Content-Type": "application/json" },
       }
     );
-    if(response.ok)
-    {
+    if (response.ok) {
+      setdisplay15(false);
       withdrawfeatcher();
-    }
-    else{
-      alert("unable to delete")
+
+    } else {
+      alert("unable to delete");
     }
     setdisplay12("hidden");
     setdisplay11("visible");
@@ -543,7 +543,8 @@ const Admin = ({ user3 }) => {
                 />
               </div>
 
-              {filteredCustomers.length > 0&&filteredCustomers!=undefined ? (
+              {filteredCustomers.length > 0 &&
+              filteredCustomers != undefined ? (
                 filteredCustomers.map((r, index) => (
                   <div
                     key={index}
@@ -911,11 +912,14 @@ const Admin = ({ user3 }) => {
                   <p>Bank:{r.bank}</p>
                   <p>Amount:{r.amount}</p>
                   <p>AccountNumber:{r.accountNumber}</p>
+                  <button
+                    className="border-2 rounded-md bg-blue-500"
+                    onClick={() => handleChoiceChange10(r._id)}
+                  >
+                    Finished
+                  </button>
                 </div>
               ))}
-            <button className="border-2 rounded-md bg-blue-500" onClick={()=>handleChoiceChange10(r._id)}>
-              Finished
-            </button>
           </div>
         )}
         <div className=" w-[300px]">
