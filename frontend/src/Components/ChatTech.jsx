@@ -265,6 +265,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
       }
     );
     if (response.ok) {
+      toastify2(MyMessage)
       const payment = await response.json();
       console.log("the payment", payment);
       await notify(payment.updateCart,"paid");
@@ -282,7 +283,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
           _id: payment.balance._id,
         })
       );
-      setSccess(true);
+      
       dispatch2(
         updateCart({
           itemId: payment.updateCart.itemId,
@@ -316,7 +317,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
     }
   };
   const toastify2 = (message) => {
-    setSccess(false);
+
     toast.success(message, {
       position: "bottom-right",
       style: { backgroundColor: "#EEEEEE", color: "black", fontWeight: "bold" },
@@ -542,7 +543,7 @@ const ChatTech = ({ user, owner, tPrice, itemId }) => {
             <ToastContainer />
           </div>
         )}
-        {Sccess && toastify2(MyMessage)}
+        
       </div>
     </div>
   );
