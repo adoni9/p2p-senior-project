@@ -1214,7 +1214,7 @@ const Products = ({ user3 }) => {
               </button>
             </div>
 
-            <div className=" ml-[-900px] bg-green-200 h-full">
+            <div className=" ml-[-900px] ">
               <ChatTechAd
                 user={user ? (user.tk == undefined ? user3 : user) : ""}
                 className="w-full h-full object-cover "
