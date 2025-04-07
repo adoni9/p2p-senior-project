@@ -3,13 +3,7 @@ P2P E-COMMERCE PLATFORM WITH SECURE PAYMENTS
 
 Prepared by:
 
-ABUBEKER HUSSEN SEMAN
-
-ADONIAS MESFIN ABERA
-
-AKRAM IDRIS NEGASH
-
-BROOK ZEWGE TEFERA
+Haile
 
 /*===============================================*/
 
