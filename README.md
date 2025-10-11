@@ -3,7 +3,7 @@ P2P E-COMMERCE PLATFORM WITH SECURE PAYMENTS
 
 Prepared by:
 
-Haile
+
 
 /*===============================================*/
 
